@@ -2,7 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Home from './Components/Home'
 import List from './Components/List'
-import Detail from './Components/Details'
+//import Detail from './Components/Details'
+import Navigation from './Navigation/Navigation'
 
 export default class App extends React.Component {
   render() {
@@ -11,7 +12,7 @@ export default class App extends React.Component {
         <Text>Wesh les Morray!</Text>
         <Home/>
         <List/>
-        <Detail/>
+        <Navigation/>
       </View>
     );
   }
