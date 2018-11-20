@@ -1,0 +1,52 @@
+{
+    "restos": [
+        {
+            "name": "BurgerKing",
+            "stars": "2",
+            "image": "",
+            "description": "Hmmmmm... Burger King !",
+            "menu": "Menu King Size Double Whooper Cheese + Cheddar fries",
+            "price": "15€"
+        },
+        {
+            "name": "McDonald's",
+            "stars": "4",
+            "image": "",
+            "description": "Venez comme vous êtes",
+            "menu": "Menu Maxi BestOf Big Mac + Mc Flurry",
+            "price": "11€"
+        },
+        {
+            "name": "O'Tacos",
+            "stars": "3",
+            "image": "",
+            "description": "Un Tacos, oui, mais O'Tacos",
+            "menu": "GigaTacos - Plus 2kg de viande",
+            "price": "Gratuit/25€"
+        },
+        {
+            "name": "Subway",
+            "stars": "1",
+            "image": "",
+            "description": "Préparé sous vos yeux",
+            "menu": "Menu Etudiant - Sub + 1 Boisson + 1 Cookie",
+            "price": "8€"
+        },
+        {
+            "name": "Quick",
+            "stars": "5",
+            "image": "",
+            "description": "Nous, c'est le goût",
+            "menu": "MilkShake Vanille",
+            "price": "3€"
+        },
+        {
+            "name": "BagelStein",
+            "stars": "5",
+            "image": "",
+            "description": "Arrêtez de manger de la merde",
+            "menu": "Menu 2 bagels - 1 salé + 1 sucré + 1 boisson",
+            "price": "8,90€"
+        }
+    ]
+}
