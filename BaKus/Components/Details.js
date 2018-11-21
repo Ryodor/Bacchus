@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, TextInput, Alert, TouchableOpacity } from 'react-native';
 import Menu from './Menu';
 import Score from './Score';
+import GoogleMap from './GoogleMap';
 
 class Details extends React.Component {
     constructor(props) {
@@ -23,7 +24,8 @@ class Details extends React.Component {
                 {resto.name}
                 </Text>
                 <Score stars={resto.stars} style={styles.stars}/>
-                <Menu proposition={resto.menu}/>
+                <GoogleMap/>
+                <Menu style={styles.menu} proposition={resto.menu}/>
             </View>
         )
     }
@@ -33,12 +35,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         backgroundColor: '#eee',
-    },
-    law: {
-        flex: 1,
-        flexDirection: 'row',
-        marginTop: '34%',
-        fontSize: 10
     },
     image:{
         top:-5,
@@ -66,6 +62,9 @@ const styles = StyleSheet.create({
         color: '#fa0',
         fontSize: 20,
         left: 0
+    },
+    menu:{
+        marginTop: 10
     }
 })
 export default Details;

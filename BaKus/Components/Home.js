@@ -9,11 +9,7 @@ class HomeScreen extends React.Component {
           <SuggestionList/>
           <Button
             title="Go to Details"
-            onPress={() => this.props.navigation.navigate('Gmp')}
-          />
-          <Button
-            title="Go to Custom Marker"
-            onPress={() => this.props.navigation.navigate('Cmk')}
+            onPress={() => this.props.navigation.navigate('Dtl')}
           />
         </View>
       );

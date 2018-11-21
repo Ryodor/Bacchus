@@ -7,10 +7,12 @@ const { width, height } = Dimensions.get('window');
 
 class GoogleMap extends React.Component {
     render() {
-               return <View accessible={true} style={styles.container}>
-                   <Text>Google Map</Text>
-                   <MapView style={styles.map} initialRegion={{ latitude: 37.78825, longitude: -122.4324, latitudeDelta: 0.0922, longitudeDelta: 0.0421 }} />
-                 </View>;
+               return (
+                  <View accessible={true} style={styles.container}>
+                      <Text>Google Map</Text>
+                      <MapView style={styles.map} initialRegion={{ latitude: 37.78825, longitude: -122.4324, latitudeDelta: 0.0922, longitudeDelta: 0.0421 }} />
+                  </View>
+               );
              }
   }
 
@@ -22,17 +24,13 @@ class GoogleMap extends React.Component {
       backgroundColor: "#bdc3c7"
     },
     container: {
-      position: "absolute",
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
       justifyContent: "flex-end",
       alignItems: "center",
       borderRadius: 10,
       overflow: "hidden",
-      height: 250,
-      width: width - 20
+      height: 225,
+      width: width - 10,
+      marginBottom: 10
     },
     map: {
       position: "absolute",
@@ -41,7 +39,7 @@ class GoogleMap extends React.Component {
       right: 0,
       bottom: 0,
       height: 250,
-      width: width - 20
+      width: width - 10
     }
   });
 
