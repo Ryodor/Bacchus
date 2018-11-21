@@ -2,7 +2,7 @@ import React from 'react';
 
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import HomeScreen from './Components/Home'
-import Detail from './Components/Details'
+import Details from './Components/Details'
 import List from './Components/List'
 import Gmap from './Components/GoogleMap'
 import CMark from './Components/CustomMarker'
@@ -10,8 +10,18 @@ import CMark from './Components/CustomMarker'
 
 const RootStack = createStackNavigator(
   {
-    Hme: HomeScreen,
-    Dtl: Detail,
+    Hme:{
+      screen: HomeScreen,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    Dtl: {
+      screen: Details,
+      navigationOptions: {
+        header: null,
+      },
+    },
     Lst: List,
     Gmp: Gmap,
     Cmk : CMark,

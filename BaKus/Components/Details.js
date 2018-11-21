@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
         fontSize: 10
     },
     image:{
+        top:-5,
         borderRadius: 400,
         borderWidth: 3,
         borderColor: '#fa0',
