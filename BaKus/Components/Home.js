@@ -1,31 +1,18 @@
 import React from 'react';
+import { Button, View, Text } from 'react-native';
 
-import { StyleSheet, Text, View, Image, TextInput, Alert, TouchableOpacity } from 'react-native';
-class Home extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-        }
-    }
+class HomeScreen extends React.Component {
     render() {
-        return (
-            <View style={styles.container}>                
-                <Text style={styles.law}>Acceuille</Text>
-            </View>
-        )
+      return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+          <Text>Home New</Text>
+          <Button
+            title="Go to Details"
+            onPress={() => this.props.navigation.navigate('Dtl')}
+          />
+        </View>
+      );
     }
-}
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    law: {
-        flex: 1,
-        flexDirection: 'row',
-        marginTop: '34%',
-        fontSize: 10
-    }
-})
-export default Home;
+  }
+
+  export default HomeScreen;

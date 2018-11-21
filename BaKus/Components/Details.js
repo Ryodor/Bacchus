@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyleSheet, Text, View, Image, TextInput, Alert, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, Alert, TouchableOpacity, Button } from 'react-native';
 class Details extends React.Component {
     constructor(props) {
         super(props)
@@ -11,6 +11,10 @@ class Details extends React.Component {
         return (
             <View style={styles.container}>                
                 <Text style={styles.law}>Détails</Text>
+                <Button
+            title="Go to Details"
+            onPress={() => this.props.navigation.navigate('HomeS')}
+          />
             </View>
         )
     }
