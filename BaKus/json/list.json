@@ -5,7 +5,7 @@
             "stars": "2",
             "image": "",
             "description": "Hmmmmm... Burger King !",
-            "menu": "Menu King Size Double Whooper Cheese + Cheddar fries",
+            "menu": "King Size Double Whooper Cheese \n+ Cheddar fries",
             "price": "15€"
         },
         {
@@ -13,7 +13,7 @@
             "stars": "4",
             "image": "",
             "description": "Venez comme vous êtes",
-            "menu": "Menu Maxi BestOf Big Mac + Mc Flurry",
+            "menu": "Maxi BestOf Big Mac \n+ Mc Flurry",
             "price": "11€"
         },
         {
@@ -29,7 +29,7 @@
             "stars": "1",
             "image": "",
             "description": "Préparé sous vos yeux",
-            "menu": "Menu Etudiant - Sub + 1 Boisson + 1 Cookie",
+            "menu": "Menu Etudiant \nSub + 1 Boisson + 1 Cookie",
             "price": "8€"
         },
         {
@@ -45,7 +45,7 @@
             "stars": "5",
             "image": "",
             "description": "Arrêtez de manger de la merde",
-            "menu": "Menu 2 bagels - 1 salé + 1 sucré + 1 boisson",
+            "menu": "Menu 2 bagels \n1 salé + 1 sucré + 1 boisson",
             "price": "8,90€"
         }
     ]
