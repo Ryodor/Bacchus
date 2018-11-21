@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { StyleSheet, Text, View, Image, TextInput, Alert, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, Alert, TouchableOpacity, ScrollView } from 'react-native';
+import ComponentsList from './ComponentsList'
+
 class List extends React.Component {
     constructor(props) {
         super(props)
@@ -9,23 +11,15 @@ class List extends React.Component {
     }
     render() {
         return (
-            <View style={styles.container}>                
-                <Text style={styles.law}>Listes</Text>
-            </View>
+            <ScrollView style={styles.container}>                
+                <ComponentsList/>
+            </ScrollView>
         )
     }
 }
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    law: {
-        flex: 1,
-        flexDirection: 'row',
-        marginTop: '34%',
-        fontSize: 10
+        flex: 1
     }
 })
 export default List;
