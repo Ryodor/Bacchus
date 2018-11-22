@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { StyleSheet, Text, View, Image, TextInput, Alert, TouchableOpacity, FlatList } from 'react-native';
-import Suggestion from './Suggestion'
+import Fav from './Fav'
 
-class SuggestionList extends React.Component {
+class FavList extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -16,9 +16,9 @@ class SuggestionList extends React.Component {
     render() {
         var json = require('../json/list.json');
         return (
-            <View>
+            <View style={styles.container}>
                 <Text style={styles.title}>
-                    Choix de la Team
+                    Favoris
                 </Text>
                 <FlatList
                 horizontal
@@ -30,7 +30,7 @@ class SuggestionList extends React.Component {
                         })
                     }
                 >
-                    <Suggestion name={item.name} menu={item.menu} price={item.price}/>
+                    <Fav name={item.name}/>
                 </TouchableOpacity>
                 }/>
             </View>
@@ -45,7 +45,10 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         fontSize: 20,
         fontWeight: 'bold'
+    },
+    container:{
+        marginBottom: 30
     }
 })
 
-export default SuggestionList;
+export default FavList;

@@ -1,19 +1,41 @@
 import React from 'react';
-import { Button, View, Text } from 'react-native';
+import { Button, View, ScrollView, Text, StyleSheet } from 'react-native';
+import Header from './Header'
 import SuggestionList from './SuggestionList'
+import FavList from './FavList'
 
 class HomeScreen extends React.Component {
     render() {
-      return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <SuggestionList/>
-          <Button
-            title="Go to Details"
-            onPress={() => this.props.navigation.navigate('Dtl')}
-          />
-        </View>
-      );
+        return (
+            <ScrollView contentContainerStyle={styles.scrollContainer}>
+                <View style={styles.container}>
+                    <Header/>
+                    <FavList navigation={this.props.navigation}/>
+                    <SuggestionList navigation={this.props.navigation}/>
+                </View>
+            </ScrollView>
+        );
     }
-  }
+}
 
-  export default HomeScreen;
+const styles = StyleSheet.create({
+    scrollContainer:{
+        flexGrow : 1, 
+        justifyContent : 'center'
+    },
+    container: {
+        backgroundColor: '#eee',
+        flex: 1,
+        justifyContent: 'center'
+    },
+    searchInput: {
+        backgroundColor: '#ccc'
+    },
+    searchContainer: {
+        backgroundColor: '#eee',
+        borderBottomColor: '#eee',
+        borderTopColor: '#eee',
+    }
+});
+
+export default HomeScreen;

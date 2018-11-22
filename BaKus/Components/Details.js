@@ -14,9 +14,12 @@ class Details extends React.Component {
         this.state = {
         }
     }
+
     render() {
+        const itemId = ''+ this.props.navigation.getParam('itemId');
         var json = require('../json/list.json');
-        var resto = json.restos[0];
+        var resto = json.restos.filter(item => item.id == itemId)
+        resto = resto[0]
         return (
             <ScrollView 
             contentContainerStyle={{flexGrow : 1, justifyContent : 'center'}}>
@@ -37,6 +40,10 @@ class Details extends React.Component {
     }
 }
 const styles = StyleSheet.create({
+    scrollContainer:{
+        flexGrow : 1, 
+        justifyContent : 'center'
+    },
     container: {
         flex:1,
         alignItems: 'center',

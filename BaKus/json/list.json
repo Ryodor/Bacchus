@@ -1,14 +1,16 @@
 {
     "restos": [
         {
-            "name": "BurgerKing ",
+            "id": "1234",
+            "name": "Burger King",
             "stars": "2",
             "image": "",
             "description": "Hmmmmm... Burger King !",
-            "menu": "King Size Double Whooper Cheese \n+ Cheddar fries",
+            "menu": "Menu King Size Double Steakhouse \n+ Cheddar fries",
             "price": "15€"
         },
         {
+            "id": "2345",
             "name": "McDonald's",
             "stars": "4",
             "image": "",
@@ -17,14 +19,16 @@
             "price": "11€"
         },
         {
+            "id": "3456",
             "name": "O'Tacos",
             "stars": "3",
             "image": "",
             "description": "Un Tacos, oui, mais O'Tacos",
-            "menu": "GigaTacos - Plus 2kg de viande",
+            "menu": "GigaTacos - Plus de 2kg de viande",
             "price": "Gratuit/25€"
         },
         {
+            "id": "4567",
             "name": "Subway",
             "stars": "1",
             "image": "",
@@ -33,6 +37,7 @@
             "price": "8€"
         },
         {
+            "id": "5678",
             "name": "Quick",
             "stars": "5",
             "image": "",
@@ -41,6 +46,7 @@
             "price": "3€"
         },
         {
+            "id": "6789",
             "name": "BagelStein",
             "stars": "5",
             "image": "",
