@@ -3,11 +3,17 @@ import { StyleSheet, Text, View ,FlatList } from 'react-native';
 import ItemList from './ItemList'
  
  class ComponentsList extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+    }
+}
   render() {
     var JsonResto = require('../json/list')
+    var restos = JsonResto.restos.filter(item => item.type.includes(this.props.search))
     return (
       <FlatList style={styles.list} 
-      data={JsonResto.restos}
+      data={restos}
       renderItem={({item}) => 
         <ItemList
                   name={item.name} 

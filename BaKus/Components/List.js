@@ -10,9 +10,10 @@ class List extends React.Component {
         }
     }
     render() {
+        const text = ''+ this.props.navigation.getParam('search');
         return (
-            <ScrollView style={styles.container} >                
-                <ComponentsList />
+            <ScrollView style={styles.container}>  
+                <ComponentsList search={text}/>
             </ScrollView>
         )
     }

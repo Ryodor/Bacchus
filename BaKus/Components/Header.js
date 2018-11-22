@@ -5,11 +5,28 @@ import SuggestionList from './SuggestionList'
 import FavList from './FavList'
 
 class Header extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            firstQuery: '',
+        }
+    }
+    
+    onEnd(){
+        let text = this.state.firstQuery;
+        this.props.navigation.navigate('Lst', {
+            search: text
+        });
+    }
+
     render() {
         return (
             <View style={styles.container}>
                 <Image style={styles.profile} source={require('../assets/placeholder.jpg')}/>
                 <SearchBar 
+                round
+                onEndEditing={this.onEnd.bind(this)}
+                onChangeText={query => this.setState({ firstQuery: query })}
                 style={styles.search}
                 inputStyle={styles.searchInput}
                 containerStyle={styles.searchContainer}

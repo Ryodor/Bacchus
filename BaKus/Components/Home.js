@@ -9,7 +9,7 @@ class HomeScreen extends React.Component {
         return (
             <ScrollView contentContainerStyle={styles.scrollContainer}>
                 <View style={styles.container}>
-                    <Header/>
+                    <Header navigation={this.props.navigation}/>
                     <FavList navigation={this.props.navigation}/>
                     <SuggestionList navigation={this.props.navigation}/>
                 </View>
