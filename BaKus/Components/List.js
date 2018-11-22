@@ -11,15 +11,17 @@ class List extends React.Component {
     }
     render() {
         return (
-            <ScrollView style={styles.container}>                
-                <ComponentsList/>
+            <ScrollView style={styles.container} >                
+                <ComponentsList />
             </ScrollView>
         )
     }
 }
+ 
 const styles = StyleSheet.create({
     container: {
         flex: 1
-    }
+    },
+    
 })
 export default List;
