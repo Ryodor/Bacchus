@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { StyleSheet, Text, View, Image, TextInput, Alert, TouchableOpacity, InlineImage } from 'react-native';
+import { Dimensions, StyleSheet, Text, View, Image, TextInput, Alert, TouchableOpacity, InlineImage } from 'react-native';
+const { width, height } = Dimensions.get('window');
+
 
 class Menu extends React.Component {
     constructor(props) {
@@ -23,7 +25,7 @@ class Menu extends React.Component {
 }
 const styles = StyleSheet.create({
     container: {
-        minWidth: 350,
+        width: width-20,
         position: 'relative',
         backgroundColor: '#fff',
         borderRadius: 10,

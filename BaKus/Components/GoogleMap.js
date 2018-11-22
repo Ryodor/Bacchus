@@ -29,7 +29,7 @@ class GoogleMap extends React.Component {
       borderRadius: 10,
       overflow: "hidden",
       height: 225,
-      width: width - 10,
+      width: width - 20,
       marginBottom: 10
     },
     map: {

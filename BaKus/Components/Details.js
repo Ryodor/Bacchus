@@ -1,9 +1,12 @@
 import React from 'react';
 
-import { StyleSheet, Text, View, Image, TextInput, Alert, TouchableOpacity } from 'react-native';
+import { Dimensions, StyleSheet, Text, View, Image, TextInput, Alert, ScrollView } from 'react-native';
 import Menu from './Menu';
 import Score from './Score';
 import GoogleMap from './GoogleMap';
+
+const { width, height } = Dimensions.get('window');
+
 
 class Details extends React.Component {
     constructor(props) {
@@ -15,24 +18,27 @@ class Details extends React.Component {
         var json = require('../json/list.json');
         var resto = json.restos[0];
         return (
-            <View style={styles.container}>
-                <Image
-                source={require('../assets/placeholder.jpg')}
-                style={styles.image}
-                />
-                <Text style={styles.name}>
-                {resto.name}
-                </Text>
-                <Score stars={resto.stars} style={styles.stars}/>
-                <GoogleMap/>
-                <Menu style={styles.menu} proposition={resto.menu}/>
-            </View>
+            <ScrollView 
+            contentContainerStyle={{flexGrow : 1, justifyContent : 'center'}}>
+                <View style={styles.container}>
+                    <Image
+                    source={require('../assets/placeholder.jpg')}
+                    style={styles.image}
+                    />
+                    <Text style={styles.name}>
+                    {resto.name}
+                    </Text>
+                    <Score stars={resto.stars} style={styles.stars}/>
+                    <GoogleMap/>
+                    <Menu style={styles.menu} proposition={resto.menu}/>
+                </View>
+            </ScrollView>
         )
     }
 }
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex:1,
         alignItems: 'center',
         backgroundColor: '#eee',
     },
