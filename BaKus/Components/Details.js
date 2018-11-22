@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Dimensions, StyleSheet, Text, View, Image, TextInput, Alert, ScrollView } from 'react-native';
+import { Dimensions, StyleSheet, Text, View, Image, TextInput, Alert, TouchableOpacity, ScrollView } from 'react-native';
 import Menu from './Menu';
 import Score from './Score';
 import GoogleMap from './GoogleMap';

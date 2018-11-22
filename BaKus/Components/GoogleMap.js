@@ -5,18 +5,28 @@ import MapView from 'react-native-maps';
 
 const { width, height } = Dimensions.get('window');
 
+const LATITUDE = 3.78825;
+const LONGITUDE = -122.4324;
+const LATITUDE_DELTA = 0.0922;
+const LONGITUDE_DELTA = 0.0421;
+
 class GoogleMap extends React.Component {
     render() {
                return (
                   <View accessible={true} style={styles.container}>
                       <Text>Google Map</Text>
-                      <MapView style={styles.map} initialRegion={{ latitude: 37.78825, longitude: -122.4324, latitudeDelta: 0.0922, longitudeDelta: 0.0421 }} />
+                      <MapView style={styles.map} initialRegion={{ 
+                        latitude: LATITUDE, 
+                        longitude: LONGITUDE  , 
+                        latitudeDelta: LATITUDE_DELTA,
+                        longitudeDelta: LONGITUDE_DELTA, 
+                      }} />
                   </View>
                );
              }
   }
 
-
+  
   const styles = StyleSheet.create({
     fadeIn: {
       width: 250,

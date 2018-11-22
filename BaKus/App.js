@@ -6,6 +6,7 @@ import Details from './Components/Details'
 import List from './Components/List'
 import Gmap from './Components/GoogleMap'
 import CMark from './Components/CustomMarker'
+import Geoloc from './Components/Geolocated'
 
 
 const RootStack = createStackNavigator(
@@ -23,6 +24,8 @@ const RootStack = createStackNavigator(
       },
     },
     Lst: List,
+    Cmk: CMark,
+    Glc: Geoloc,
   },
   {
     initialRouteName: 'Hme',
