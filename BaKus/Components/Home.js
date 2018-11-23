@@ -12,10 +12,6 @@ class HomeScreen extends React.Component {
                     <Header navigation={this.props.navigation}/>
                     <FavList navigation={this.props.navigation}/>
                     <SuggestionList navigation={this.props.navigation}/>
-                    <Button
-                        title="Go to Geoloc"
-                        onPress={() => this.props.navigation.navigate('Glc')}
-                    />
                 </View>
             </ScrollView>
         );
@@ -31,14 +27,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#eee',
         flex: 1,
         justifyContent: 'center'
-    },
-    searchInput: {
-        backgroundColor: '#ccc'
-    },
-    searchContainer: {
-        backgroundColor: '#eee',
-        borderBottomColor: '#eee',
-        borderTopColor: '#eee',
     }
 });
 

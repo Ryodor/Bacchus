@@ -44,7 +44,9 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         marginRight: 10,
         marginBottom: 5,
-        fontSize: 20
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: '#fa0'
     },
     proposition:{
         marginTop: 5,

@@ -8,11 +8,6 @@ class FavList extends React.Component {
         super(props)
     }
 
-    nav(itemId){
-        this.props.navigation.navigate('Dtl', {
-            itemId: itemId
-        });
-    }
     render() {
         var json = require('../json/list.json');
         return (
@@ -30,7 +25,7 @@ class FavList extends React.Component {
                         })
                     }
                 >
-                    <Fav name={item.name}/>
+                    <Fav image={item.image} name={item.name}/>
                 </TouchableOpacity>
                 }/>
             </View>
@@ -47,6 +42,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     container:{
+        marginTop: 20,
         marginBottom: 30
     }
 })

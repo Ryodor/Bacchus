@@ -23,9 +23,12 @@ const RootStack = createStackNavigator(
         header: null,
       },
     },
-    Lst: List,
-    Cmk: CMark,
-    Glc: Geoloc,
+    Lst: {
+      screen: List,
+      navigationOptions: {
+        header: null,
+      },
+    },
   },
   {
     initialRouteName: 'Hme',

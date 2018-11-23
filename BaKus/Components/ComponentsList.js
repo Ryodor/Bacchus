@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View ,FlatList } from 'react-native';
+import { TouchableOpacity, StyleSheet, Text, View ,FlatList } from 'react-native';
 import ItemList from './ItemList'
  
  class ComponentsList extends React.Component {
@@ -7,20 +7,28 @@ import ItemList from './ItemList'
     super(props)
     this.state = {
     }
-}
+  }
   render() {
     var JsonResto = require('../json/list')
-    var restos = JsonResto.restos.filter(item => item.type.includes(this.props.search))
+    var search = this.props.search
+    var restos = JsonResto.restos.filter(item => item.type.includes(search.toLowerCase()))
     return (
       <FlatList style={styles.list} 
       data={restos}
       renderItem={({item}) => 
+      <TouchableOpacity 
+      onPress={() => this.props.navigation.navigate('Dtl', {
+              itemId: item.id
+          })
+      }
+  >
         <ItemList
                   name={item.name} 
                   description={item.description}
                   menu={item.menu}
                   price={item.price} 
                   image={item.image}/>
+                  </TouchableOpacity>
       }
     />
     );
@@ -32,13 +40,13 @@ import ItemList from './ItemList'
 const styles = StyleSheet.create({
   list:{
       flex: 1,
-      marginTop: 25
+      color: '#eee'
   },
   container: {
       minWidth: 350,
       position: 'relative',
       marginTop: 10,
-      backgroundColor: '#fff',
+      backgroundColor: '#eee',
       borderRadius: 10,
       borderWidth: 2,
       borderColor: '#fa0',

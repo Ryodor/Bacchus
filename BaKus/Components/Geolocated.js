@@ -1,5 +1,5 @@
-import React from 'react';
-import {geolocated} from 'react-geolocated';
+// import React from 'react';
+// import {geolocated} from 'react-geolocated';
 
 
 // class Demo extends React.Component {

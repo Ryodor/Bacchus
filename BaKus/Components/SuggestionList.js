@@ -8,11 +8,6 @@ class SuggestionList extends React.Component {
         super(props)
     }
 
-    nav(itemId){
-        this.props.navigation.navigate('Dtl', {
-            itemId: itemId
-        });
-    }
     render() {
         var json = require('../json/list.json');
         return (
@@ -30,7 +25,7 @@ class SuggestionList extends React.Component {
                         })
                     }
                 >
-                    <Suggestion name={item.name} menu={item.menu} price={item.price}/>
+                    <Suggestion image={item.image} name={item.name} menu={item.menu} price={item.price}/>
                 </TouchableOpacity>
                 }/>
             </View>

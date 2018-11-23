@@ -30,7 +30,8 @@ class Header extends React.Component {
                 style={styles.search}
                 inputStyle={styles.searchInput}
                 containerStyle={styles.searchContainer}
-                placeholder="Hello"/>
+                placeholder="Rechercher..."
+                value={this.props.navigation.getParam('search')}/>
             </View>
         );
     }
@@ -47,11 +48,11 @@ const styles = StyleSheet.create({
         marginLeft: 10
     },
     container: {
+        marginTop: 30,
         backgroundColor: '#eee',
         flexDirection:'row', 
         flexWrap:'wrap',
-        justifyContent: 'center',
-        marginBottom: 20
+        justifyContent: 'center'
     },
     searchInput: {
         backgroundColor: '#ccc'

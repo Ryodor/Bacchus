@@ -4,13 +4,29 @@ import { StyleSheet, Text, View , Image , FlexDirection, WebView} from 'react-na
  /*style={{flex:1,flexDirection:'row', overflow:'scroll'}}*/
 
  class ItemList extends React.Component {
+  getImage(){
+    switch (this.props.image) {
+        case 'bk':
+          return require("../assets/bk_logo.png");
+        case 'mc':
+          return require("../assets/macdo_logo.png");              
+        case 'ot':
+          return require("../assets/otacos_logo.png"); 
+        case 'sw':
+          return require("../assets/subway_logo.png"); 
+        case 'bs':
+          return require("../assets/bagelstein_logo.jpeg"); 
+        case 'qk':
+          return require("../assets/quick_logo.png"); 
+      }
+}
   render() {
     var JsonResto = require('../json/list')
     return (
         <View style={styles.container}> 
        
     
-        <Image style ={styles.image} source={require('../assets/placeholder.jpg')}/>
+       <View style={styles.imgContainer}><Image style={styles.image} source={this.getImage()}/></View>
         <View style={styles.myText}>
             <Text>{this.props.name}</Text>
             <Text>{this.props.description}</Text>
@@ -46,21 +62,19 @@ const styles = StyleSheet.create({
   },
   image:{
     flexDirection:'column',
-    
-	
     width:100,
     height:100,
-    borderRadius: 200,
-    borderWidth: 3,
-    borderColor: '#fa0',
-    borderBottomWidth: 0,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.9,
-    shadowRadius: 2,
-    elevation: 5,
-    marginRight: 23,
 
+},
+imgContainer:{
+  margin: 5,
+  height: 100,
+  width: 100,
+  maxHeight: 200,
+  borderRadius:100,
+  borderWidth: 2,
+  borderColor: '#fa0',
+  overflow: 'hidden'
 },
 
  

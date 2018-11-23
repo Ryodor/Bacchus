@@ -8,10 +8,26 @@ class Suggestion extends React.Component {
     constructor(props) {
         super(props)
     }
+    getImage(){
+        switch (this.props.image) {
+            case 'bk':
+              return require("../assets/bk.jpg");
+            case 'mc':
+              return require("../assets/macdo.jpg");              
+            case 'ot':
+              return require("../assets/otacos.jpg"); 
+            case 'sw':
+              return require("../assets/subway.png"); 
+            case 'bs':
+              return require("../assets/bagelstein.jpg"); 
+            case 'qk':
+              return require("../assets/quick.jpg"); 
+          }
+    }
     render() {
         return (
             <View style={styles.container}>
-                <Image style={styles.image} source={require('../assets/placeholder.jpg')}/>
+                <Image style={styles.image} source={this.getImage()}/>
                 <View style={styles.text}>
                     <Text style={styles.title}>
                     {this.props.name}

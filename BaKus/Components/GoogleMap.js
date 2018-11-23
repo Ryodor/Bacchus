@@ -5,19 +5,39 @@ import MapView from 'react-native-maps';
 
 const { width, height } = Dimensions.get('window');
 
-const LATITUDE = 3.78825;
-const LONGITUDE = -122.4324;
 const LATITUDE_DELTA = 0.0922;
 const LONGITUDE_DELTA = 0.0421;
 
 class GoogleMap extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+        latitude: null,
+        longitude: null,
+        error: null,
+    };
+  }
+  componentDidMount() {
+    requestCameraPermission()
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        this.setState({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+          error: null,
+        });
+      },
+      (error) => this.setState({ error: error.message }),
+      { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
+    );
+  }
     render() {
                return (
                   <View accessible={true} style={styles.container}>
                       <Text>Google Map</Text>
                       <MapView style={styles.map} initialRegion={{ 
-                        latitude: LATITUDE, 
-                        longitude: LONGITUDE  , 
+                        latitude: this.state.latitude, 
+                        longitude: this.state.longitude, 
                         latitudeDelta: LATITUDE_DELTA,
                         longitudeDelta: LONGITUDE_DELTA, 
                       }} />
@@ -52,5 +72,25 @@ class GoogleMap extends React.Component {
       width: width - 10
     }
   });
+
+  async function requestCameraPermission() {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.CAMERA,
+        {
+          'title': 'Cool Photo App Camera Permission',
+          'message': 'Cool Photo App needs access to your camera ' +
+                     'so you can take awesome pictures.'
+        }
+      )
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        console.log("You can use the camera")
+      } else {
+        console.log("Camera permission denied")
+      }
+    } catch (err) {
+      console.warn(err)
+    }
+  }
 
   export default GoogleMap;
